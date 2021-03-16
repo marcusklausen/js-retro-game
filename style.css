@@ -1,0 +1,59 @@
+html, body {
+    margin:0;
+    padding:0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.game {
+    margin: 0 auto;
+    width:400px;
+}
+
+.scene {
+    height: 480px;
+    background-image: url(road.png);
+    background-size: 400px;
+    position: relative;
+}
+
+.scene-active {
+    animation: drive 2s infinite linear;
+}
+
+.sprite1 {
+    position: absolute;
+    bottom:0;
+    left:170px;
+
+}
+
+@keyframes drive {
+    from {
+        background-position-y: 0px;
+    }
+
+    to {
+        background-position-y: 240px;
+    }
+}
+
+.screen-text {
+    position:absolute;
+    top:0;
+    left:0;
+    display:flex;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.5);
+    color:#FFF;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
