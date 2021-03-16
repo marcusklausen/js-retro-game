@@ -3,7 +3,9 @@ let sprite1 = document.querySelector('.sprite1');
 let scene = document.querySelector('.scene');
 let audio = document.querySelector('#audio');
 let screenText = document.querySelector('.screen-text');
-
+let scoreSpan = document.querySelector('#score');
+let globalScore = 0;
+let timer;
 let url = window.location.href;
 
 url = new URL(url);
@@ -27,6 +29,10 @@ scene.addEventListener('click', function(e) {
     wheel.focus();
     screenText.style.display = "none";
     scene.classList.add('scene-active');
+    timer = window.setInterval(function(){
+        globalScore += 100;
+        scoreSpan.innerHTML = globalScore;
+    }, 1000);
 });
 
 wheel.addEventListener('input', function(e) {
@@ -38,5 +44,6 @@ wheel.addEventListener('input', function(e) {
         scene.classList.remove('scene-active');
         screenText.style.display = "flex";
         screenText.innerHTML = "<h1>Game over!</h1>";
+        window.clearInterval(timer);
     }
 })
