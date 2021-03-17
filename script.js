@@ -32,6 +32,8 @@ let explosionCar;
 
 
 /* ----------------------------*/
+
+// Vælg korrekt billede sti ud fra playerCar value og ændre src attribute på sprite1 class i html
 if (playerCar == "porsche") {
     sprite1.setAttribute('src', "sprite1.png");
     explosionCar = "sprite1-explode.png";
@@ -122,9 +124,11 @@ wheel.addEventListener('input', function(e) {
 /* --- Helper functions
 -------------------------*/
 
-// Generer random nummer
+// Generer random nummer helper function
 function getRandomNumber() {
-    return Math.floor(Math.random()*(8-2)+2); // Math.floor == rund til ned til nærmeste hele tal
+    return Math.floor(Math.random()*(8-2)+2);   // Math.floor() == rund ned til nærmeste hele tal
+                                                // Math.random() == tilfældigt tal mellem 0 og 1
+                                                // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 }
 
 
