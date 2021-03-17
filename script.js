@@ -19,10 +19,11 @@ let timer;
 // Fang url streng fra browser url
 let url = window.location.href;
 
-// konveter url streng til URL objekt
+// konverter url streng til URL objekt
 url = new URL(url);
 
-// Kør .searchParams på url objekt og find 'car'
+// Kør searchParams.get method på url objekt og find 'car'
+// searchParams == computed property, .get == getter method på searchParams
 let playerCar = url.searchParams.get('car');
 
 // Sørg for at explosionCar har global scope
