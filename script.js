@@ -4,6 +4,9 @@ let scene = document.querySelector('.scene');
 let audio = document.querySelector('#audio');
 let screenText = document.querySelector('.screen-text');
 let scoreSpan = document.querySelector('#score');
+
+// Grab enemy  class with querySelector
+let enemy1 = document.querySelector('.sprite-enemy1');
 let globalScore = 0;
 let timer;
 let url = window.location.href;
@@ -29,6 +32,9 @@ scene.addEventListener('click', function(e) {
     wheel.focus();
     screenText.style.display = "none";
     scene.classList.add('scene-active');
+
+    //add enemy-active css class to enemy sprite class
+    enemy1.classList.add('enemy-active');
     timer = window.setInterval(function(){
         globalScore += 100;
         scoreSpan.innerHTML = globalScore;
@@ -43,7 +49,15 @@ wheel.addEventListener('input', function(e) {
         sprite1.setAttribute('src', explotionCar);
         scene.classList.remove('scene-active');
         screenText.style.display = "flex";
-        screenText.innerHTML = "<h1>Game over!</h1>";
+        screenText.innerHTML = "<h1>Game over!<br>Score: " + globalScore + "</h1>";
         window.clearInterval(timer);
     }
 })
+
+// Helper functions
+
+
+// Get random number within bounds of road
+function getRandomNumber() {
+    return Math.random(Math.random()*(8-2)+2);
+}

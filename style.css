@@ -21,6 +21,7 @@ img {
     background-image: url(road.png);
     background-size: 400px;
     position: relative;
+    overflow: hidden;
 }
 
 .scene-active {
@@ -57,3 +58,24 @@ img {
     align-content: center;
     justify-content: center;
 }
+
+.sprite-enemy1 {
+    position: absolute;
+    top: -200px;
+    left:0;
+}
+
+.enemy-active {
+    animation: enemy 2s infinite linear;
+}
+
+@keyframes enemy {
+    from {
+        top: -200px;
+    }
+
+    to {
+        top: 480px;
+    }
+}
+
