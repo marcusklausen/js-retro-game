@@ -11,32 +11,32 @@
 
 <body>
     <audio id="audio" source="8bit-crash.mp3"></audio>
-    <div class="game">
-        <h1>Racing Game</h1>
-        <p class="score-contianer">
-            <span>Score:</span>
-            <span id="score">0</span>
+        <div class="game">
+            <h1>Racing Game</h1>
+            <p class="score-contianer">
+                <span>Score:</span>
+                <span id="score">0</span>
 
-        </p>
-        <form id="setup" action="game.html">
-        </form>
-        <div class="scene">
-            <div class="screen-text">
-                <h1>Start game</h1>
+            </p>
+            <form id="setup" action="game.html">
+            </form>
+            <div class="scene">
+                <div class="screen-text">
+                    <h1>Start game</h1>
+                </div>
+                <img src="sprite1.png" class="sprite1">
+                <img src="sprite-enemy1.png" class="sprite-enemy1">
+            </div><!-- scene -->
+
+
+            <div class="controls">
+                <input type="range" name="range" id="wheel" value="" min="1" max="8">
             </div>
-            <img src="sprite1.png" class="sprite1">
-            <img src="sprite-enemy1.png" class="sprite-enemy1">
-        </div><!-- scene -->
+
+        </div><!-- game -->
 
 
-        <div class="controls">
-            <input type="range" name="range" id="wheel" value="" min="1" max="8">
-        </div>
-
-    </div><!-- game -->
-
-
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>
