@@ -93,6 +93,7 @@ function getRandomNumber() {
 function gameEnd() {
     sprite1.setAttribute('src', explotionCar);
     scene.classList.remove('scene-active');
+    enemy1.classList.remove('enemy-active');
     screenText.style.display = "flex";
     screenText.innerHTML = "<h1>Game over!<br>Score: " + globalScore + "</h1>";
     window.clearInterval(timer);
